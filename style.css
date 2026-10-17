@@ -6,11 +6,12 @@ body{
     background-color: rgb(74, 254, 254);
 }
 .container{
-    width: 1200px;
+    width: 1060px;
     margin: 50px auto;
 }
 .gallery{
     display: grid;
+    grid-template-columns: repeat(4, 250px);
     grid-template-areas: 
         "first first first second"
         "first first first second"
@@ -19,47 +20,50 @@ body{
         "third third six seven"
         "third third eight nine";
     gap: 20px;
+    grid-auto-rows: 140px;
 }
 .item{
     background-color: aliceblue;
 }
 .first{
     grid-area: first;
-    width: 770px;
-    height: 270px;
 }
 .second{
     grid-area: second;
-    width: 250px;
-    height: 390px;
 }
 .third{
     grid-area: third;
-    width: 505px;
-    height: 565px;
 }
 .four{
     grid-area: four;
-    width: 250px;
-    height: 260px;
 }
 .five{
     grid-area: five;
-    width: 250px;
 }
 .six{
     grid-area: six;
-    width: 250px;
 }
 .seven{
     grid-area: seven;
-    width: 250px;
 }
 .eight{
     grid-area: eight;
-    width: 250px;
 }
 .nine{
     grid-area: nine;
-    width: 250px;
+}
+
+.first{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.first img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    padding: 20px;
+}
+.content h2{
+    margin-bottom: 15px;
 }
